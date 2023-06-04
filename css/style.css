@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    /* border: 1px solid red; */
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-primary: #1f242d;
+    --color-seconday: #323946;
+    --color-text: #0ef;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-primary);
+    color: white;
+    overflow-x: hidden;
+}
+
+section:nth-child(odd)
+{
+    background-color: var(--color-seconday);
+}
+
+header {
+    position: fixed;
+    background-color: #1f242d;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4vh 10vw;
+    border-bottom: 1px solid white;
+}
+
+header > h1 {
+    animation: slideRight 1s forwards;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+nav > a {
+    /* opacity: 0; */
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.09s*var(--i));
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav > a:hover, nav > a.active {
+    color: var(--color-text);
+}
+
+section {
+    /* border: 1px solid red; */
+}
+
+section#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 4vh 10vw;
+}
+
+section#home > h3 {
+    font-size: 48px;
+    font-weight: 300;
+}
+
+section#home > h3:first-child {
+    /* opacity: 0; */
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+section#home > h3:nth-of-type(2) {
+    /* opacity: 0; */
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+section#home > h1 {
+    animation: slideRight 1s ease forwards;
+    /* opacity: 0; */
+    animation-delay: 1s;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.social {
+    margin-top: 3vh;
+}
+
+.social > p {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+
+.social > a {
+    text-decoration: none;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    border-radius: 100%;
+    padding: 8px 10px;
+    margin-right: 1vw;
+    transition: 0.3s;
+}
+
+
+.social > a:hover {
+    background-color: var(--color-text);
+    color: var(--color-primary);
+    box-shadow: 0 0 20px var(--color-text);
+}
+
+
+section#about {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    padding: 4vh 10vw;
+}
+
+section#about > h1 {
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    font-size: 48px;
+}
+
+section#about p {
+    font-size: 18px;
+}
+
+section#skills {
+    padding: 4vh 10vw;
+    height: 150vh;
+}
+
+section#skills > h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+}
+
+section#skills img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 5vh;
+    /* justify-content: center; */
+}
+
+section#skills div > div {
+    border-radius: 20%;
+
+}
+
+.card {
+    background-color: var(--color-seconday);
+    padding: 1vw;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color-text);
+}
+
+section#projects {
+    height: 100vh;
+    padding: 4vh 10vw;
+}
+
+section#projects > h1 {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    font-size: 48px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.project-card {
+    background-color: var(--color-primary);
+    border-radius: 20%;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: var(--color-seconday);
+    background-color: var(--color-text);
+    border-radius: 1vw;
+    padding: 1vh;
+}
+
+.project-card p {
+    margin-bottom: 2vh;
+}
+
+.project-card:hover {
+    border: 1px solid var(--color-text);
+    transform: scale(1.1);
+}
+
+.project-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+
+footer {
+    text-align: center;
+}

@@ -38,10 +38,6 @@ header {
     border-bottom: 1px solid white;
 }
 
-header > h1 {
-    animation: slideRight 1s forwards;
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -49,9 +45,6 @@ nav {
 }
 
 nav > a {
-    /* opacity: 0; */
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.09s*var(--i));
     text-decoration: none;
     color: white;
     transition: 0.3s;
@@ -74,22 +67,7 @@ section#home > h3 {
     font-weight: 300;
 }
 
-section#home > h3:first-child {
-    /* opacity: 0; */
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 0.7s;
-}
-
-section#home > h3:nth-of-type(2) {
-    /* opacity: 0; */
-    animation: slideTop 1s ease forwards;
-    animation-delay: 0.7s;
-}
-
 section#home > h1 {
-    animation: slideRight 1s ease forwards;
-    /* opacity: 0; */
-    animation-delay: 1s;
     font-size: 72px;
     font-weight: 500;
 }
@@ -128,7 +106,6 @@ span {
 section#about {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     height: 100vh;
     padding: 4vh 10vw;
